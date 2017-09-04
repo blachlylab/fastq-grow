@@ -4,6 +4,7 @@ import std.stdio;
 import std.string;
 
 const int BCLEN = 6;
+const string VERSION = "1.0";
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 	string readid;
 	bool grow;
 
-	stderr.writeln("[fastq_grow started]");
+	stderr.writefln("[fastq_grow %s started]", VERSION);
 
 	auto range = stdin.byLine();
 	foreach(line; range) {
